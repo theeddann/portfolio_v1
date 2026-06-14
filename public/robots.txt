@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shubham-bhardwaj.vercel.app/sitemap.xml
