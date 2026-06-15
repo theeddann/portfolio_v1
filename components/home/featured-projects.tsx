@@ -8,42 +8,42 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     id: "01",
-    title: "Growth Dashboard",
-    role: "Product Manager",
-    timeline: "3 months",
-    impact: "40% increase in activation rate",
-    tags: ["Growth", "Analytics", "B2B"],
+    title: "MeSan Mentorship Platform",
+    role: "Co-Founder & Product Lead",
+    timeline: "Oct 2025 — Present",
+    impact: "INR 1.65L revenue generated",
+    tags: ["EdTech", "0-to-1", "React.js"],
     description:
-      "Redesigned the onboarding funnel and built a real-time growth dashboard that gave the team instant visibility into activation bottlenecks.",
+      "Co-founded and led product development for an education and mentorship platform. Built with React.js and Remix, generating INR 1.65 Lakhs in revenue while leading a 12-member team.",
     color: "from-blue-500/10 to-transparent",
     accentColor: "bg-blue-500",
-    href: "/case-studies/growth-dashboard",
+    href: "/case-studies/mesan-mentorship",
   },
   {
     id: "02",
-    title: "AI Search Feature",
-    role: "Product Analyst",
-    timeline: "2 months",
-    impact: "25% reduction in search drop-off",
-    tags: ["AI/ML", "Search UX", "Data"],
+    title: "EV Charging AI Optimization",
+    role: "Product & Analytics Lead",
+    timeline: "May 2026 — Jun 2026",
+    impact: "16.44% revenue increase",
+    tags: ["AI/ML", "Python", "Analytics"],
     description:
-      "Led discovery and prioritization for an AI-powered search revamp, collaborating with ML engineers and designers to ship v1 ahead of schedule.",
-    color: "from-purple-500/10 to-transparent",
-    accentColor: "bg-purple-500",
-    href: "/case-studies/ai-search",
+      "Built an end-to-end AI system using Python and machine learning to optimize EV charging network operations through demand forecasting and dynamic pricing across 2.1M+ records.",
+    color: "from-emerald-500/10 to-transparent",
+    accentColor: "bg-emerald-500",
+    href: "/case-studies/ev-charging-optimization",
   },
   {
     id: "03",
-    title: "Mobile Checkout Revamp",
-    role: "Associate PM",
-    timeline: "6 weeks",
-    impact: "18% lift in conversion",
-    tags: ["Mobile", "E-commerce", "UX"],
+    title: "Ziddi Krunch GTM Strategy",
+    role: "Product Strategist",
+    timeline: "Jan 2026 — Feb 2026",
+    impact: "15% conversion uplift projected",
+    tags: ["GTM", "Consumer", "Strategy"],
     description:
-      "Identified friction points in the mobile checkout flow through user interviews and session recordings, then drove a focused redesign sprint.",
-    color: "from-emerald-500/10 to-transparent",
-    accentColor: "bg-emerald-500",
-    href: "/case-studies/mobile-checkout",
+      "Developed a digital-first go-to-market strategy for MuscleBlaze's high-protein snack brand, targeting 150M+ health-conscious consumers through Quick Commerce and D2C channels.",
+    color: "from-purple-500/10 to-transparent",
+    accentColor: "bg-purple-500",
+    href: "/case-studies/ziddi-krunch-gtm",
   },
 ];
 
@@ -61,16 +61,15 @@ export default function FeaturedProjects() {
           transition={{ duration: 0.6 }}
           className="mb-16 flex items-end justify-between"
         >
-          <div>
-            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-blue-500">
-              Work
-            </p>
-            <h2 className="text-4xl font-bold text-white lg:text-5xl">
-              Featured Case Studies
-            </h2>
-          </div>
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-blue-500">
+             Featured Work
+         </p>
+
+          <h2 className="text-4xl font-bold text-white lg:text-5xl">
+             Selected Projects
+           </h2>
           <Link
-            href="/case-studies"
+            href="/projects"
             className="hidden items-center gap-1 text-sm text-[#A1A1AA] transition-colors hover:text-white lg:flex"
           >
             View all work
@@ -152,7 +151,7 @@ export default function FeaturedProjects() {
                         </p>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-[#A1A1AA] transition-all duration-200 group-hover:text-white">
-                        Read case study
+                        Read project
                         <ArrowUpRight
                           size={14}
                           className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

@@ -9,6 +9,7 @@ export type CaseStudy = {
   impact: string
   tags: string[]
   accentColor: string
+  deckUrl?: string
   problem: { summary: string; points: string[] }
   research: { summary: string; methods: { method: string; finding: string }[] }
   strategy: { summary: string; framework: string; frameworkDetails: string[]; decision: string }
@@ -99,6 +100,7 @@ export const caseStudies: CaseStudy[] = [
     impact: "₹24 Crore Year 1 revenue projected",
     tags: ["GTM Strategy", "Consumer", "Product Roadmap"],
     accentColor: "text-purple-400",
+    deckUrl: "/case-studies/ziddi-krunch.pdf",
     problem: {
       summary: "The Indian healthy snacks market is polarized between unhealthy mass snacks (Lays, Kurkure) and sweet-biased protein products (bars, cookies, peanut butter). Fitness-conscious consumers — especially urban millennials — are experiencing 'sweet fatigue' from protein bars and shakes. The Indian savory snack market is valued at $14 Billion growing at 8% CAGR till 2030, yet there is zero dominant player in the High-Protein Savory segment. This is the Blue Ocean Gap.",
       points: [
@@ -122,7 +124,7 @@ export const caseStudies: CaseStudy[] = [
       summary: "Positioned Ziddi Krunch as India's first savory high-protein chip — not another sweet bar. Built on a 3-Pillar Moat Strategy: Scientific Superiority (Biozyme technology for zero bloating), Palate Superiority (Indian chatpata flavors), and Trust Superiority (pharma-grade forensic transparency with batch-specific authentication codes).",
       framework: "TAM-SAM-SOM Revenue Funnel + MoSCoW",
       frameworkDetails: [
-        "TAM: 150M health-conscious Indians earning >₹4.5L/year who care about health",
+        "TAM: 150M health-conscious Indians earning more than ₹4.5L/year who care about health",
         "SAM: 5M active gym-goers — MuscleBlaze already has 60% brand recall with this audience",
         "SOM Year 1: 2% of SAM = 100,000 users buying 4 packs/month = ₹24 Crore revenue",
         "Must have: Biozyme-powered baked chips in 3 Indian flavors (Ziddi Masala, Cream and Onion, Peri-Peri Punch)",
@@ -172,8 +174,9 @@ export const caseStudies: CaseStudy[] = [
     impact: "5-10% COGS reduction + emergency purchases from 25% to 10%",
     tags: ["Operations", "Strategy", "Finance"],
     accentColor: "text-amber-400",
+    deckUrl: "/case-studies/roastery-coffee-house.pdf",
     problem: {
-      summary: "Roastery Coffee House is India's only profitable bootstrapped cafe chain — 16 cafes across 6 cities, HQ in Noida, recently raised ₹50 Crore institutional funding. The challenge: scale aggressively from 16 to 50 locations by December 2027 (212% growth) without breaking the financial discipline that made them profitable in the first place. The India cafe market stands at $564.3M growing at 8.1% CAGR, with Specialty Coffee projected to grow from $2.94B to $6.28B by 2030.",
+      summary: "Roastery Coffee House is India's only profitable bootstrapped cafe chain — 16 cafes across 6 cities, HQ in Noida, recently raised ₹50 Crore institutional funding. The challenge: scale aggressively from 16 to 50 locations by December 2027 (212% growth) without breaking the financial discipline that made them profitable in the first place.",
       points: [
         "Emergency Purchase Ratio over 25% versus industry benchmark of under 10% — expensive ad-hoc buying destroying margins",
         "No dedicated procurement function head — team still assembling with unstructured logistics",
@@ -209,7 +212,7 @@ export const caseStudies: CaseStudy[] = [
       summary: "Designed a phased 90-day implementation plan with clear milestones and actionable metrics.",
       steps: [
         { phase: "Days 1-30: Foundation", action: "Deploy ROAST-TRAC app MVP in all 16 cafes for real-time tracking and UX friction identification. Map supply chain infrastructure and finalize Zonal Hub lease agreements for the 5-city expansion pipeline. Conduct comprehensive vendor audit and begin centralized bulk procurement onboarding." },
-        { phase: "Days 31-60: Standardization", action: "Roll out tiered P2P approval workflows across all active locations. Launch Vendor Scorecards tracking OTIF (On-Time In-Full) delivery rates and cost variances. Implement mandatory weekly inventory reconciliation to align POS data with physical stock and close leakage gaps." },
+        { phase: "Days 31-60: Standardization", action: "Roll out tiered P2P approval workflows across all active locations. Launch Vendor Scorecards tracking OTIF delivery rates and cost variances. Implement mandatory weekly inventory reconciliation to align POS data with physical stock and close leakage gaps." },
         { phase: "Days 61-90: Optimization", action: "Analyze 60 days of system data to identify historical spend leakage. Centralize procurement of Top 10 high-volume A-Items (coffee beans) at Hub level. Formalize emergency purchase protocol to drive ratio from 25% down to the under-10% industry benchmark." },
       ],
     },
@@ -219,7 +222,7 @@ export const caseStudies: CaseStudy[] = [
         { label: "COGS Reduction", value: "5-10%", change: "via consolidated sourcing" },
         { label: "Emergency Purchases", value: "<10%", change: "from 25% baseline" },
         { label: "Target Locations", value: "50 cafes", change: "212% growth by 2027" },
-        { label: "Working Capital", value: "Optimized", change: "via 30-45 day payment cycles" },
+        { label: "Working Capital", value: "Optimized", change: "via 30-45 day cycles" },
       ],
     },
     learnings: {

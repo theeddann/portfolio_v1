@@ -1,7 +1,8 @@
 "use client"
-
+import Image from "next/image"
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import { User, Target, Zap, BarChart2 } from "lucide-react"
 
 const timeline = [
   {
@@ -37,22 +38,22 @@ const values = [
   {
     title: "User First",
     description: "Every decision starts with understanding the user. Data tells you what, research tells you why.",
-    icon: "👤",
+    icon: User,
   },
   {
     title: "Clarity Over Complexity",
     description: "The best products are simple. I cut through noise to find the essential thing that needs to be built.",
-    icon: "🎯",
+    icon: Target,
   },
   {
     title: "Bias for Action",
     description: "Done is better than perfect. Ship, learn, iterate. Momentum matters more than perfection.",
-    icon: "⚡",
+    icon: Zap,
   },
   {
     title: "Data-Informed",
     description: "Intuition has a seat at the table, but data drives decisions. I build dashboards before I build features.",
-    icon: "📊",
+    icon: BarChart2,
   },
 ]
 
@@ -109,43 +110,92 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={heroInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative overflow-hidden rounded-3xl border border-[#27272A] bg-[#111111] aspect-square flex items-center justify-center">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: "radial-gradient(circle at 30% 30%, rgba(59,130,246,0.15) 0%, transparent 60%)",
-                  }}
-                />
-                <div className="relative z-10 text-center p-8">
-                  <div className="mx-auto mb-6 h-32 w-32 rounded-full border-2 border-[#27272A] bg-[#1a1a1a] flex items-center justify-center text-5xl">
-                    👤
-                  </div>
-                  <p className="text-xl font-bold text-white">Shubham Bhardwaj</p>
-                  <p className="mt-1 text-sm text-[#A1A1AA]">Product Manager</p>
-                  <div className="mt-4 flex items-center justify-center gap-2">
-                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
-                    <span className="text-xs text-[#A1A1AA]">Open to opportunities</span>
-                  </div>
-                  <div className="mt-6 grid grid-cols-3 gap-4 border-t border-[#27272A] pt-6">
-                    {[
-                      { v: "2+", l: "Products" },
-                      { v: "10K+", l: "Users" },
-                      { v: "2+", l: "Years" },
-                    ].map((s) => (
-                      <div key={s.l} className="text-center">
-                        <p className="text-lg font-bold text-white">{s.v}</p>
-                        <p className="text-xs text-[#A1A1AA]">{s.l}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={heroInView ? { opacity: 1, scale: 1 } : {}}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  className="flex justify-center lg:justify-end"
+>
+  <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-[#27272A] bg-[#111111] min-h-[560px]">
+    
+    {/* Background Glow */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "radial-gradient(circle at 50% 20%, rgba(59,130,246,0.12) 0%, transparent 70%)",
+      }}
+    />
+
+    <div className="relative z-10 flex h-full flex-col items-center px-8 py-12">
+      
+      {/* Profile Image */}
+      <div className="mb-8 h-600 w-40 overflow-hidden rounded-full border-1.5 border-[#27272A] shadow-xl">
+        <Image
+          src="/images/profile.jpg"
+          alt="Shubham Bhardwaj"
+          width={160}
+          height={160}
+          priority
+          className="h-full w-full object-cover"
+        />
+      </div>
+
+      {/* Name */}
+      <h3 className="text-3xl font-bold text-white">
+        Shubham Bhardwaj
+      </h3>
+
+      <p className="mt-2 text-sm text-[#A1A1AA]">
+        Product Manager • IIT Roorkee
+      </p>
+
+      {/* Status */}
+      <div className="mt-5 flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+        <span className="text-sm text-[#A1A1AA]">
+          Open to opportunities
+        </span>
+      </div>
+
+      {/* Divider */}
+      <div className="my-8 h-px w-full bg-[#27272A]" />
+
+      {/* Stats */}
+      <div className="grid w-full grid-cols-3 gap-4">
+        {[
+          { value: "2+", label: "Products" },
+          { value: "10K+", label: "Users" },
+          { value: "2+", label: "Years" },
+        ].map((stat) => (
+          <div key={stat.label} className="text-center">
+            <div className="text-2xl font-bold text-white">
+              {stat.value}
+            </div>
+            <div className="mt-1 text-xs uppercase tracking-wide text-[#71717A]">
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Divider */}
+      <div className="my-8 h-px w-full bg-[#27272A]" />
+
+      {/* Short Bio */}
+      <div className="space-y-3 text-center">
+        <p className="text-sm leading-relaxed text-[#A1A1AA]">
+          Building products at the intersection of user needs,
+          business goals, and technology.
+        </p>
+
+        <p className="text-sm leading-relaxed text-[#71717A]">
+          Founder at MeSan • Marketing Executive at IIT Roorkee
+          Motorsports & Cognizance.
+        </p>
+      </div>
+    </div>
+  </div>
+</motion.div>
           </div>
         </div>
       </div>
@@ -173,19 +223,24 @@ export default function AboutPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((value, i) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 24 }}
-                animate={valuesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group rounded-2xl border border-[#27272A] bg-[#111111] p-6 transition-all duration-300 hover:border-[#3F3F46]"
-              >
-                <span className="mb-4 block text-3xl">{value.icon}</span>
-                <h3 className="mb-2 text-base font-semibold text-white">{value.title}</h3>
-                <p className="text-sm text-[#A1A1AA] leading-relaxed">{value.description}</p>
-              </motion.div>
-            ))}
+            {values.map((value, i) => {
+  const Icon = value.icon
+  return (
+    <motion.div
+      key={value.title}
+      initial={{ opacity: 0, y: 24 }}
+      animate={valuesInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: i * 0.08 }}
+      className="group rounded-2xl border border-[#27272A] bg-[#111111] p-6 transition-all duration-300 hover:border-[#3F3F46]"
+    >
+      <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg border border-[#27272A] bg-black">
+        <Icon size={16} className="text-[#A1A1AA]" />
+      </div>
+      <h3 className="mb-2 text-base font-semibold text-white">{value.title}</h3>
+      <p className="text-sm text-[#A1A1AA] leading-relaxed">{value.description}</p>
+    </motion.div>
+  )
+})}
           </div>
         </div>
       </div>
