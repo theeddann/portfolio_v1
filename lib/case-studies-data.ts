@@ -247,6 +247,8 @@ export const caseStudies: CaseStudy[] = [
     impact: "16.44% revenue increase projected",
     tags: ["AI/ML", "Python", "Analytics"],
     accentColor: "text-emerald-400",
+    deckUrl: "/case-studies/ev-charging-optimization.pdf",
+
     problem: {
       summary: "EV charging networks using static pricing were leaving significant revenue on the table. During peak demand, chargers were overloaded and users faced wait times. During off-peak hours, chargers sat idle generating zero revenue. The opportunity was dynamic pricing — charge more when demand is high, less when it is low — to simultaneously maximize revenue and optimize network utilization across 2.1 million charging records.",
       points: [
