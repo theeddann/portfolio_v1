@@ -69,7 +69,9 @@ export default function PDFViewer({ url, title, onClose }: PDFViewerProps) {
   >
     <X size={14} />
   </button>
-</div>    
+</div>
+          </div>
+
           {/* PDF Embed */}
           <div className="relative flex-1 bg-[#0a0a0a]">
             {loading && (
